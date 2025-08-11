@@ -95,11 +95,11 @@ def fetch_cached(filename):
 ''' The main function.
 
 system: a general-purpose analog computer represented as a PIVP represented as a dictionary mapping variable names to those variables' ODEs' expressions.
-var: a variable in system.keys() which represents the species converging to the desired real number. '''
+mainvar: a variable in system.keys() which represents the species converging to the desired real number. '''
 def compile(system, mainvar, iv, cache_filename=None, filename=None, checks = False, *args, **kwargs):
 
     debug = False
-    verbose = kwargs.get("verbose",False) # Set to True to produce intermedaite system console output.
+    verbose = kwargs.get("verbose",False) # Set to True to produce intermediate system console output.
     checks = kwargs.get("conversionchecks",True) # Set to True to conduct form checks on interemdiate systems (i.e. - is the CRN actually a CRN? More for debugging.)
     sim = kwargs.get("sim",["INPUT","CRN"]) # ["INPUT","CRN"]
     simtime = kwargs.get("simtime",20) 
@@ -130,7 +130,6 @@ def compile(system, mainvar, iv, cache_filename=None, filename=None, checks = Fa
     if verbose:
         print(f'CRN translation complete, dual railed system below:')
         print(format_dict(crn))
-        print(f'Converting CRN to non-homogeneously degree 2 form via substitution-decomposition...')
 
     print("Saving files...")
     if cache_filename:
