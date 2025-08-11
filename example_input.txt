@@ -1,0 +1,13 @@
+{"a":"b-a*b-d",
+"b": "c + a-a*b**2",
+"c": "b*c - b*c**2+.1*d",
+"d":"c-c*d"}
+			  
+{"a":3,
+"b":2,"c":3,"d":1}
+
+primary_var = "a"
+verbose = True
+conversionchecks = True
+sim = ["INPUT", "CRN"]
+simtime = 30
