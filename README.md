@@ -2,7 +2,7 @@
 In Python, convert a GPAC to a CRN by dual-railing only the variables that require it.
 
 
-basic_ops.selective_dual_rail converts a general-purpose analog computer (GPAC) into a chemical reaction network (CRN). Previous dual-railing methods either convert all the variables of the input system (as result, doubling the system size), or rely on *fast annihilation reactions*, which are not yet shown to be bounded in general.
+`basic_ops.selective_dual_rail` converts a general-purpose analog computer (GPAC) into a chemical reaction network (CRN). Previous dual-railing methods either convert all the variables of the input system (as result, doubling the system size), or rely on *fast annihilation reactions*, which are not yet shown to be bounded in general.
 
 This approach constructs a graph representing the ability of an ill-formed (non-CRN-implementable) variable to "infect" another variable in the system. Some variables are safe, and do not need to be dual-railed. In this sense, selective_dual_rail is selective. 
 
